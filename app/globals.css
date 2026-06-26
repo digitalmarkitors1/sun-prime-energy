@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-ink: #0A1628;
+  --color-ink-soft: #1B2638;
+  --color-ink-muted: #475569;
+  --color-mist: #F7F5F0;
+  --color-paper: #FFFFFF;
+  --color-stone: #6B7280;
+  --color-line: #E7E5E0;
+  --color-line-soft: #EFEDE7;
+  /* Brand: warm side — tuned to match the logo orange */
+  --color-amber: #D77019;
+  --color-amber-bright: #F58220;
+  --color-sun: #FFB36B;
+
+  /* Brand: cool side — tuned to match the logo green */
+  --color-green: #1F7A3D;
+  --color-green-bright: #2EB14E;
+  --color-green-soft: #B7E0BD;
+
+  --color-cream: #FBF6E9;
+  --color-peach: #F6E2C9;
+  --color-warm: #F4EBD8;
+  --color-bluemist: #EAEEF2;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --tracking-display: -0.02em;
+  --tracking-tight: -0.015em;
+  --tracking-eyebrow: 0.16em;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    background: var(--color-mist);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-mist);
+  }
+  h1, h2, h3, h4 {
+    letter-spacing: var(--tracking-display);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .hairline {
+    border-color: var(--color-line);
+  }
+  .grain {
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(255,255,255,0.04) 1px, transparent 0);
+    background-size: 4px 4px;
+  }
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  .marquee-track {
+    animation: marquee 38s linear infinite;
+  }
+  .marquee-track:hover { animation-play-state: paused; }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @keyframes drawline {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
 }
