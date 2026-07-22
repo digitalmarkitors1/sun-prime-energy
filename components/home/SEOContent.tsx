@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
-import { site } from "@/data/site";
 
 export function SEOContent() {
   return (
@@ -11,7 +10,7 @@ export function SEOContent() {
       {/* Full-bleed solar photo */}
       <Image
         src="/photos/aerial-utility-farm.jpg"
-        alt="Aerial view of utility-scale solar PV plant engineered by Sun Prime Energy Solutions across India"
+        alt="Aerial view of utility-scale solar PV plant engineered by Sunprime Energy Solutions across India"
         fill
         sizes="100vw"
         className="object-cover opacity-30"
@@ -59,13 +58,13 @@ export function SEOContent() {
             <div className="md:col-span-7 space-y-5 text-[15.5px] leading-relaxed text-mist/75">
               <Reveal delay={0.1}>
                 <p>
-                  <strong className="font-semibold text-mist">Sun Prime Energy Solutions</strong> is a Delhi-based
+                  <strong className="font-semibold text-mist">Sunprime Energy Solutions</strong> is a Delhi-based
                   solar EPC company delivering{" "}
                   <Link href="/services#rooftop-solar" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">commercial &amp; industrial rooftop solar</Link>,{" "}
                   <Link href="/services#epc" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">turnkey solar EPC</Link>,{" "}
                   <Link href="/services#om" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">25-year solar O&amp;M</Link>, and{" "}
                   <Link href="/services#advisory" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">solar advisory</Link>{" "}
-                  services across India. With more than 2,000 kWp of solar PV capacity engineered, built, and
+                  services across India. With more than 15,000 kWp of solar PV capacity engineered, built, and
                   operated for clients spanning manufacturing, education, healthcare, hospitality, warehousing,
                   and agrivoltaic sectors, we deliver bankable solar assets that earn for their owners across
                   decades — not quarters.
@@ -74,38 +73,13 @@ export function SEOContent() {
 
               <Reveal delay={0.15}>
                 <p>
-                  As an <strong className="font-semibold text-mist">MNRE channel partner</strong> and{" "}
-                  <strong className="font-semibold text-mist">ISO 9001:2015 certified solar company</strong>, we
+                  As an <strong className="font-semibold text-mist">ISO 9001:2015 certified solar company</strong>, we
                   own every step of the project lifecycle — site survey, yield modelling, structural and
-                  electrical engineering, BOQ specification, DISCOM net-metering, MNRE subsidy facilitation,
+                  electrical engineering, BOQ specification, DISCOM net-metering, subsidy facilitation,
                   EPC execution, and performance-rated O&amp;M with remote monitoring. We work directly with
-                  Tier-1 component partners including Havells, SolarEdge, Delta Electronics, REC Solar,
-                  Amplus, Jackson, YouSolar, and Solar-Log, so the BOM in your proposal is the BOM commissioned
+                  Tier-1 component manufacturers, so the BOM in your proposal is the BOM commissioned
                   on your roof.
                 </p>
-              </Reveal>
-
-              <Reveal delay={0.2}>
-                <p>
-                  Whether you&apos;re evaluating commercial solar capex for a manufacturing facility in
-                  Delhi NCR, planning a multi-campus institutional rooftop programme across Rajasthan and
-                  Uttar Pradesh, or commissioning a multi-megawatt ground-mount solar plant in Madhya Pradesh
-                  or Gujarat, our engineering team is the team that signs off the design, runs the EPC, and
-                  operates the plant after handover. One contract. One accountable team. Twenty-five years.
-                </p>
-              </Reveal>
-
-              <Reveal delay={0.25}>
-                <ul className="flex flex-wrap gap-2 pt-3">
-                  {site.serviceAreas.map((s) => (
-                    <li
-                      key={s}
-                      className="inline-flex items-center rounded-full border border-mist/15 bg-mist/[0.04] px-3 py-1 text-[12px] font-medium tracking-tight text-mist/75 transition-colors hover:border-amber-bright/40 hover:text-amber-bright"
-                    >
-                      Solar EPC, {s}
-                    </li>
-                  ))}
-                </ul>
               </Reveal>
             </div>
           </div>

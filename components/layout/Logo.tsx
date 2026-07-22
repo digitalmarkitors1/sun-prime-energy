@@ -15,17 +15,17 @@ type Props = {
 
 export function Logo({ className, size = "default" }: Props) {
   const heightClass =
-    size === "lg" ? "h-14 md:h-16" : "h-10 md:h-12";
+    size === "lg" ? "h-16 md:h-20" : "h-12 md:h-16";
 
   return (
     <Link
       href="/"
-      aria-label="Sun Prime Energy Solutions — Home"
+      aria-label="Sunprime Energy Solutions — Home"
       className={cn("inline-flex items-center transition-opacity hover:opacity-90", className)}
     >
       <Image
         src="/logo.png"
-        alt="Sun Prime Energy Solutions — Energy Efficiency, Solar, Consultancy"
+        alt="Sunprime Energy Solutions — Energy Efficiency, Solar, Consultancy"
         width={600}
         height={396}
         priority

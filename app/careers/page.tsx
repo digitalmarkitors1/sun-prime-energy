@@ -11,15 +11,15 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Enquiry & Career | Work at Sun Prime Energy Solutions",
+  title: "Enquiry & Career | Work at Sunprime Energy Solutions",
   description:
-    "Build solar that's engineered for the long view. Open engineering, EPC, O&M, and business development roles at Sun Prime Energy Solutions in New Delhi — plus how to send a general enquiry or apply.",
+    "Build solar that's engineered for the long view. Open EPC and O&M roles at Sunprime Energy Solutions — plus how to send a general enquiry or apply.",
   alternates: { canonical: `${site.url}/careers` },
 };
 
 const applyHref = (role?: string) =>
   `mailto:${site.careers.email}?subject=${encodeURIComponent(
-    role ? `Application — ${role}` : "Career enquiry — Sun Prime Energy Solutions",
+    role ? `Application — ${role}` : "Career enquiry — Sunprime Energy Solutions",
   )}`;
 
 export default function CareersPage() {
@@ -32,7 +32,7 @@ export default function CareersPage() {
           <>
             Build assets that outlast
             <br />
-            <span className="text-ink/55">the people who sold them.</span>
+            <span className="bg-gradient-to-r from-amber via-amber-bright to-sun bg-clip-text text-transparent">the people who sold them.</span>
           </>
         }
         lead="We hire engineers and operators who'd rather do the work properly than quickly. If that's you — or if you're a partner with an enquiry — start here."

@@ -4,7 +4,7 @@
   --color-ink: #0A1628;
   --color-ink-soft: #1B2638;
   --color-ink-muted: #475569;
-  --color-mist: #F7F5F0;
+  --color-mist: #FFFFFF;
   --color-paper: #FFFFFF;
   --color-stone: #6B7280;
   --color-line: #E7E5E0;
@@ -19,9 +19,9 @@
   --color-green-bright: #2EB14E;
   --color-green-soft: #B7E0BD;
 
-  --color-cream: #FBF6E9;
-  --color-peach: #F6E2C9;
-  --color-warm: #F4EBD8;
+  --color-cream: #FFFFFF;
+  --color-peach: #FFFFFF;
+  --color-warm: #FFFFFF;
   --color-bluemist: #EAEEF2;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;

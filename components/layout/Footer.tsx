@@ -14,7 +14,7 @@ export function Footer() {
       <div className="relative h-[200px] w-full overflow-hidden md:h-[280px]">
         <Image
           src="/photos/aerial-utility-farm.jpg"
-          alt="Aerial view of a utility-scale solar PV plant engineered by Sun Prime Energy Solutions in India"
+          alt="Aerial view of a utility-scale solar PV plant engineered by Sunprime Energy Solutions in India"
           fill
           sizes="100vw"
           className="object-cover"
@@ -48,7 +48,7 @@ export function Footer() {
             </div>
             <div className="md:col-span-5">
               <p className="max-w-md text-[15px] leading-relaxed text-mist/65">
-                Sun Prime Energy Solutions designs, builds, and operates grid-tied solar PV plants for commercial,
+                Sunprime Energy Solutions designs, builds, and operates grid-tied solar PV plants for commercial,
                 industrial, and institutional clients across India — from feasibility through
                 twenty-five years of operations.
               </p>
@@ -105,7 +105,7 @@ export function Footer() {
                 Company
               </h4>
               <ul className="mt-6 space-y-3.5 text-[14.5px] text-mist/80">
-                <li><Link href="/about" className="transition-colors hover:text-amber-bright">About Sun Prime Energy Solutions</Link></li>
+                <li><Link href="/about" className="transition-colors hover:text-amber-bright">About Sunprime Energy Solutions</Link></li>
                 <li><Link href="/projects" className="transition-colors hover:text-amber-bright">Projects</Link></li>
                 <li><Link href="/insights" className="transition-colors hover:text-amber-bright">Insights</Link></li>
                 <li><Link href="/contact" className="transition-colors hover:text-amber-bright">Contact</Link></li>
@@ -116,7 +116,10 @@ export function Footer() {
               <h4 className="text-[11px] font-medium uppercase tracking-[0.18em] text-mist/40">
                 Service areas
               </h4>
-              <ul className="mt-6 grid grid-cols-2 gap-x-3 gap-y-2.5 text-[13.5px] text-mist/70">
+              <p className="mt-6 text-[14px] font-medium tracking-tight text-mist/85">
+                Pan-India delivery
+              </p>
+              <ul className="mt-4 grid grid-cols-2 gap-x-3 gap-y-2.5 text-[13.5px] text-mist/70">
                 {site.serviceAreas.map((s) => (
                   <li key={s}>{s}</li>
                 ))}

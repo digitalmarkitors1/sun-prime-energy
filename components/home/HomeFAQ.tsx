@@ -30,7 +30,7 @@ export function HomeFAQ() {
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-md text-[15.5px] leading-relaxed text-ink/65">
                 Short answers to the questions we get most often on rooftop solar capex,
-                payback, MNRE subsidies, and O&amp;M.
+                BOM, net-metering, and O&amp;M.
               </p>
             </Reveal>
           </div>

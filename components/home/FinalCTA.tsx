@@ -14,7 +14,7 @@ export function FinalCTA() {
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const subject = encodeURIComponent("Feasibility request — Sun Prime Energy Solutions");
+    const subject = encodeURIComponent("Feasibility request — Sunprime Energy Solutions");
     const body = encodeURIComponent(
       [
         `Name: ${data.get("name")}`,
@@ -57,6 +57,9 @@ export function FinalCTA() {
                 <a className="block font-medium tracking-tight text-ink hover:text-amber" href={`mailto:${site.contact.email}`}>
                   {site.contact.email}
                 </a>
+                <a className="block font-medium tracking-tight text-ink hover:text-amber" href={`mailto:${site.contact.gmail}`}>
+                  {site.contact.gmail}
+                </a>
                 <a className="block font-medium tracking-tight text-ink hover:text-amber" href={site.contact.phoneHref}>
                   {site.contact.phone}
                 </a>
@@ -82,7 +85,7 @@ export function FinalCTA() {
                 <FieldTextarea name="notes" label="Project context" />
                 <div className="flex items-center justify-between bg-ink-soft p-5 md:p-6">
                   <p className="text-[12px] text-mist/50">
-                    {submitted ? "Opening your mail client…" : "We respond within 1 business day."}
+                    {submitted ? "Opening your mail client…" : ""}
                   </p>
                   <Button variant="amber" showArrow>
                     Send request

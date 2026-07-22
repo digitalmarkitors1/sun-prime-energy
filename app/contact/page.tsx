@@ -10,9 +10,9 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
-  title: "Contact Sun Prime Energy Solutions | Solar EPC New Delhi",
+  title: "Contact Sunprime Energy Solutions | Solar EPC New Delhi",
   description:
-    "Talk to Sun Prime Energy Solutions's engineering team in New Delhi. Feasibility studies, solar EPC proposals, and O&M onboarding for commercial, industrial, and institutional sites across India.",
+    "Talk to Sunprime Energy Solutions's engineering team in New Delhi. Feasibility studies, solar EPC proposals, and O&M onboarding for commercial, industrial, and institutional sites across India.",
   alternates: { canonical: `${site.url}/contact` },
 };
 
@@ -22,6 +22,12 @@ const channels = [
     label: "Email",
     value: site.contact.email,
     href: `mailto:${site.contact.email}`,
+  },
+  {
+    icon: Mail,
+    label: "Email (alt)",
+    value: site.contact.gmail,
+    href: `mailto:${site.contact.gmail}`,
   },
   {
     icon: Phone,
@@ -51,7 +57,7 @@ export default function ContactPage() {
           <>
             Talk to engineering.
             <br />
-            <span className="text-ink/55">Not a sales funnel.</span>
+            <span className="bg-gradient-to-r from-amber via-amber-bright to-sun bg-clip-text text-transparent">Not a sales funnel.</span>
           </>
         }
         lead="Tell us about your site — we'll come back within one business day with a feasibility view, and route you to whoever on the team can answer fastest."

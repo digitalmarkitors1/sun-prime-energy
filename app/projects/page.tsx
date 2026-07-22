@@ -13,7 +13,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Solar Projects | Industrial, Commercial & Utility-Scale",
   description:
-    "Selected solar plants engineered, built, and operated by Sun Prime Energy Solutions across India — industrial rooftop, commercial, institutional, ground-mount, agrivoltaic, and dairy carport projects.",
+    "Selected solar plants engineered, built, and operated by Sunprime Energy Solutions across India — industrial rooftop, commercial, institutional, ground-mount, agrivoltaic, and dairy carport projects.",
   alternates: { canonical: `${site.url}/projects` },
 };
 
@@ -32,10 +32,10 @@ export default function ProjectsPage() {
           <>
             A portfolio of
             <br />
-            <span className="text-ink/55">bankable solar assets.</span>
+            <span className="bg-gradient-to-r from-amber via-amber-bright to-sun bg-clip-text text-transparent">bankable solar assets.</span>
           </>
         }
-        lead="A representative cross-section of plants Sun Prime Energy Solutions has engineered, built, and operates today across commercial, industrial, and institutional sectors."
+        lead="A representative cross-section of plants Sunprime Energy Solutions has engineered, built, and operates today across commercial, industrial, and institutional sectors."
         meta={
           <div className="flex flex-col gap-6 border-l border-line pl-6 text-[13.5px]">
             <div>

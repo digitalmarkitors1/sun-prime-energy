@@ -29,7 +29,7 @@ export function Industries() {
           <div className="md:col-span-5">
             <Reveal delay={0.1}>
               <p className="text-[16px] leading-relaxed text-ink/65">
-                From manufacturing plants and warehouses to schools, hospitals, and dairy farms — Sun Prime Energy Solutions
+                From manufacturing plants and warehouses to schools, hospitals, and dairy farms — Sunprime Energy Solutions
                 designs solar plants around the load profile, roof type, and operating reality of each sector.
               </p>
             </Reveal>

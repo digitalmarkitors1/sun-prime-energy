@@ -4,7 +4,6 @@ import { Section } from "@/components/ui/Section";
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Reveal } from "@/components/ui/Reveal";
-import { CountUp } from "@/components/ui/CountUp";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import { site } from "@/data/site";
@@ -26,29 +25,11 @@ export default function WhySolarPage() {
           <>
             A balance-sheet decision,
             <br />
-            <span className="text-ink/55">not a green gesture.</span>
+            <span className="bg-gradient-to-r from-amber via-amber-bright to-sun bg-clip-text text-transparent">with returns you can model.</span>
           </>
         }
         lead="For commercial and industrial buyers, solar is one of the few capex decisions that pays for itself and keeps paying. Here's the case — economics first, sentiment second."
       />
-
-      {/* Economics band */}
-      <Section tone="ink" size="default" className="grain">
-        <Container>
-          <div className="grid grid-cols-2 gap-y-12 md:grid-cols-4 md:gap-0">
-            {site.whySolar.economics.map((s, i) => (
-              <Reveal key={s.label} delay={0.05 * i}>
-                <div className={"flex flex-col px-0 md:px-8" + (i !== 0 ? " md:border-l md:border-mist/15" : "")}>
-                  <div className="text-[36px] font-semibold tracking-tight md:text-[44px]">
-                    <CountUp value={s.value} />
-                  </div>
-                  <div className="mt-2 text-[12px] uppercase tracking-[0.16em] text-mist/55">{s.label}</div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </Section>
 
       {/* Reasons */}
       <Section tone="paper" size="loose">

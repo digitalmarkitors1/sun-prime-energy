@@ -15,10 +15,10 @@ export function WhyUs() {
         <div className="grid gap-14 md:grid-cols-12 md:gap-20">
           <div className="md:col-span-5">
             <Reveal>
-              <Eyebrow>Why Sun Prime Energy Solutions</Eyebrow>
+              <Eyebrow>Why Sunprime Energy Solutions</Eyebrow>
             </Reveal>
             <Reveal delay={0.05} as="h2" className="mt-5 text-balance text-[36px] font-semibold leading-[1.1] tracking-tight md:text-[48px]">
-              Built like a <span className="bg-gradient-to-r from-amber-bright to-amber bg-clip-text text-transparent">25-year asset</span>, not a 25-day install.
+              Built like a <span className="bg-gradient-to-r from-amber-bright to-amber bg-clip-text text-transparent">25-year asset</span>, engineered to perform for decades.
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-md text-[16px] leading-relaxed text-ink/65">

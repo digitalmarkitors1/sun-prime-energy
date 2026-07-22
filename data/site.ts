@@ -1,11 +1,11 @@
 export const site = {
-  name: "Sun Prime Energy Solutions",
-  shortName: "Sun Prime Energy Solutions",
+  name: "Sunprime Energy Solutions",
+  shortName: "Sunprime Energy Solutions",
   url: "https://sunpesolutions.com",
-  legalName: "Sun Prime Energy Solutions Pvt. Ltd.",
+  legalName: "Sunprime Energy Solutions Pvt. Ltd.",
   tagline: "Engineered solar for industry, infrastructure, and institutions.",
   description:
-    "Sun Prime Energy Solutions is a Delhi-based solar EPC company designing, engineering, building, and operating grid-tied rooftop and ground-mount solar PV plants for commercial, industrial, and institutional clients across India. ISO 9001:2015 certified. MNRE channel partner. 2,000+ kWp delivered.",
+    "Sunprime Energy Solutions is a Delhi-based solar EPC company designing, engineering, building, and operating grid-tied rooftop and ground-mount solar PV plants for commercial, industrial, and institutional clients across India. ISO 9001:2015 certified. 15,000+ kWp delivered.",
   heroImage: "/photos/hero-industrial-rooftop.jpg",
   contact: {
     address: "602, Devika Tower, Nehru Place, New Delhi 110019, India",
@@ -16,8 +16,9 @@ export const site = {
     postalCode: "110019",
     country: "IN",
     email: "md@sunpesolutions.com",
-    phone: "+91 11 0000 0000",
-    phoneHref: "tel:+911100000000",
+    gmail: "sunprime.energysol@gmail.com",
+    phone: "+91 98181 00758",
+    phoneHref: "tel:+919818100758",
     hours: "Mon–Sat, 10:00–18:30 IST",
   },
   social: {
@@ -32,14 +33,13 @@ export const site = {
     { label: "Contact", href: "/contact" },
   ],
   stats: [
-    { value: "2,000+", label: "kWp delivered" },
+    { value: "15,000+", label: "kWp delivered" },
     { value: "ISO 9001", label: "Quality certified" },
-    { value: "MNRE", label: "Channel partner" },
+    { value: "In-house", label: "Design, EPC & O&M" },
     { value: "Pan-India", label: "Project footprint" },
   ],
   certifications: [
     { code: "ISO 9001:2015", body: "Quality Management System" },
-    { code: "MNRE Channel Partner", body: "Ministry of New & Renewable Energy" },
     { code: "MSME Registered", body: "Ministry of Micro, Small & Medium Enterprises" },
   ],
   partners: [
@@ -101,9 +101,9 @@ export const site = {
       no: "04",
       title: "Solar Advisory, Subsidy & Compliance",
       summary:
-        "MNRE subsidy facilitation, DISCOM net-metering, statutory clearances, and feasibility studies — engineered off your project's critical path so commissioning stays on schedule.",
+        "Subsidy facilitation, DISCOM net-metering, statutory clearances, and feasibility studies — engineered off your project's critical path so commissioning stays on schedule.",
       bullets: [
-        "MNRE / state subsidy support",
+        "State & central subsidy support",
         "DISCOM & net-metering",
         "Regulatory & statutory filings",
       ],
@@ -130,7 +130,7 @@ export const site = {
     },
     {
       slug: "hospitality",
-      title: "Hospitality & Retail",
+      title: "Commercial, Hospitality & Retail",
       body: "Hotels, resorts, and large retail formats — solar with O&M tied to your asset's 24×7 brand standards.",
       img: "/photos/rooftop-urban.jpg",
     },
@@ -150,27 +150,19 @@ export const site = {
   homeFaqs: [
     {
       q: "What does a rooftop solar EPC project cost in India?",
-      a: "For most commercial and industrial sites, capex sits between ₹40 and ₹55 per Wp installed, depending on roof type, structural readiness, BOM choices, and applicable subsidies. Sun Prime Energy Solutions issues a fixed-price BOQ after the site survey — no surprise variations during execution.",
-    },
-    {
-      q: "How long does payback take on a commercial solar plant?",
-      a: "Typical payback for a well-engineered grid-tied rooftop plant is 3 to 5 years, against a 25-year asset life. The exact number depends on tariff slab, captive load, and whether you self-finance or use OPEX/RESCO models — we model all three before issuing a recommendation.",
-    },
-    {
-      q: "Are you registered as an MNRE channel partner?",
-      a: "Yes. Sun Prime Energy Solutions is a registered MNRE channel partner and ISO 9001:2015 certified. We also handle DISCOM net-metering, CEIG, and CEA filings as part of every EPC contract.",
+      a: "Prices vary with roof type, structural readiness, BOM choices, and applicable subsidies. Sunprime Energy Solutions issues a fixed-price BOQ after the site survey — a firm number for your site, with no surprise variations during execution.",
     },
     {
       q: "Which OEMs do you specify in your BOM?",
-      a: "We work with Tier-1 module manufacturers and partner directly with Havells, SolarEdge, Delta Electronics, REC, Amplus, Jackson, and Solar-Log for inverters, monitoring, and BoS. Every BOM names OEM and model — no generic placeholders.",
+      a: "We work with Tier-1 ALMM approved module manufacturers. Every BOM names OEM and model — no generic placeholders.",
     },
     {
       q: "Do you operate solar plants you didn't build?",
-      a: "Yes. Our Solar O&M practice onboards existing rooftop and ground-mount assets — whether built by another EPC or an in-house team — and runs them under PR-based SLAs with remote monitoring.",
+      a: "Yes. Our Solar O&M practice onboards existing rooftop and ground-mount plants — whether built by another EPC or an in-house team — and runs them under PR-based SLAs with remote monitoring.",
     },
     {
       q: "Where in India do you take on projects?",
-      a: "From our Delhi office, we deliver projects across Delhi NCR, Haryana, Punjab, Uttar Pradesh, Rajasthan, Himachal Pradesh, Madhya Pradesh, Gujarat, and Maharashtra. For projects below 250 kWp outside this geography, we evaluate logistics on a case-by-case basis.",
+      a: "Across India. From our Delhi office, we deliver commercial, industrial, and institutional solar projects nationwide.",
     },
   ],
   serviceAreas: [
@@ -192,24 +184,25 @@ export const site = {
     },
     {
       title: "Tier-1 component partnerships",
-      body: "Direct relationships with Havells, SolarEdge, Delta, and REC mean component access, warranty alignment, and bankable BOM.",
+      body: "Direct relationships with Goodwe, Havells, Sungrow, Renewsys, Adani, Vikram, and Waaree mean component access, warranty alignment, and bankable BOM.",
     },
     {
       title: "Single team, single accountability",
-      body: "Design, EPC, and O&M sit inside Sun Prime Energy Solutions — there is no subcontractor finger-pointing when SLAs are on the line.",
+      body: "Design, EPC, and O&M sit inside Sunprime Energy Solutions, under one accountable team.",
     },
     {
       title: "Compliance handled, not delegated",
-      body: "MNRE channel partner status and in-house regulatory experience keep DISCOM and statutory filings off your critical path.",
+      body: "In-house regulatory experience keeps DISCOM and statutory filings off your critical path.",
     },
   ],
   process: [
     { step: "01", title: "Site assessment", body: "Survey, shadow study, structural and load review." },
     { step: "02", title: "Engineering & design", body: "Yield model, single-line diagrams, BOQ." },
-    { step: "03", title: "Approvals & subsidy", body: "DISCOM filings, net-metering, MNRE pathways." },
-    { step: "04", title: "Procurement", body: "Tier-1 modules, inverters, BoS — direct from OEM." },
-    { step: "05", title: "EPC & commissioning", body: "Civil, structures, DC/AC, testing, handover." },
-    { step: "06", title: "O&M & monitoring", body: "PR-based SLA, remote analytics, AMC." },
+    { step: "03", title: "Approvals", body: "DISCOM filings, net-metering, CEIG/CEA clearances." },
+    { step: "04", title: "Subsidy", body: "Subsidy assessment, applications, and disbursement support." },
+    { step: "05", title: "Procurement", body: "Tier-1 modules, inverters, BoS — direct from OEM." },
+    { step: "06", title: "EPC & commissioning", body: "Civil, structures, DC/AC, testing, handover." },
+    { step: "07", title: "O&M & monitoring", body: "PR-based SLA, remote analytics, AMC." },
   ],
   projects: [
     {
@@ -236,7 +229,7 @@ export const site = {
   ],
   testimonial: {
     quote:
-      "Sun Prime Energy Solutions treated our plant the way our own engineering team would. The yield modelling was honest, the BOQ held up, and commissioning came in on the date they committed in month one.",
+      "Sunprime Energy Solutions treated our plant the way our own engineering team would. The yield modelling was honest, the BOQ held up, and commissioning came in on the date they committed in month one.",
     name: "Operations Director",
     company: "Manufacturing client, NCR",
   },
@@ -254,6 +247,7 @@ export const site = {
         "Tier-1 modules, string and central inverters",
         "Mounting structures rated for site wind zone",
         "DC/AC cabling, LT panels, monitoring",
+        "Engineering, procurement & construction, including BOS",
       ],
       suited:
         "Manufacturing units, warehousing, schools and universities, hospitals, hotels, large commercial complexes.",
@@ -288,7 +282,7 @@ export const site = {
       lead:
         "Performance-monitored O&M with remote analytics and predictable SLAs — protecting plant yield across its 25-year service life.",
       includes: [
-        "24×7 remote monitoring (Solar-Log)",
+        "24×7 remote monitoring",
         "Performance Ratio (PR) reporting",
         "Preventive maintenance schedule",
         "Module cleaning programme",
@@ -296,7 +290,7 @@ export const site = {
         "Annual yield & insurance reports",
       ],
       suited:
-        "Existing solar assets — whether built by Sun Prime Energy Solutions or transitioned in from another EPC — that need professional, accountable operations.",
+        "Existing solar assets — whether built by Sunprime Energy Solutions or transitioned in from another EPC — that need professional, accountable operations.",
       typical: "Any plant ≥ 50 kWp",
       timeline: "Onboarding in 2 weeks",
       img: "/photos/rooftop-urban.jpg",
@@ -308,7 +302,7 @@ export const site = {
       lead:
         "Subsidy facilitation, net-metering, and statutory clearances — kept off your project's critical path so commissioning stays on schedule.",
       includes: [
-        "MNRE / state subsidy applications",
+        "State & central subsidy applications",
         "DISCOM net-metering filings",
         "CEIG/CEA approvals",
         "Energy audits & feasibility",
@@ -326,7 +320,7 @@ export const site = {
     {
       no: "01",
       title: "Yield over price-per-watt",
-      body: "Bankable plants outlive cheap ones. We optimise for 25-year energy output, not month-one capex headlines.",
+      body: "Bankable plants outlive cheap ones. We optimise for 25-year energy output.",
     },
     {
       no: "02",
@@ -341,7 +335,7 @@ export const site = {
     {
       no: "04",
       title: "Single-team accountability",
-      body: "Design, EPC, and O&M sit inside Sun Prime Energy Solutions — there is no subcontractor finger-pointing on SLA day.",
+      body: "Design, EPC, and O&M sit inside Sunprime Energy Solutions, under one accountable team.",
     },
   ],
   founder: {
@@ -350,9 +344,9 @@ export const site = {
     name: "Lt. Mr. S.K. Saini",
     role: "Founder, Visionary Leader & Industry Pioneer",
     story: [
-      "Late Mr. S.K. Saini, a distinguished Chartered Accountant and seasoned management professional, founded Sun Prime Energy Solutions Pvt. Ltd. with a vision to transform the energy landscape through sustainable, customer-centric, and innovative solutions — providing Energy Management Services focused on solar plant installations, energy audits & ESCO projects, EV infrastructure, and CSR consultancy.",
+      "Late Mr. S.K. Saini, a distinguished Chartered Accountant and seasoned management professional, founded Sunprime Energy Solutions Pvt. Ltd. with a vision to transform the energy landscape through sustainable, customer-centric, and innovative solutions — providing Energy Management Services focused on solar plant installations, energy audits & ESCO projects, EV infrastructure, and CSR consultancy.",
       "With over 35 years of exemplary service in the Tata Group — including impactful tenures at Tata Steel and Tata Power Delhi Distribution Ltd. — Mr. Saini brought a wealth of experience, leadership, and purpose to the company he established. His pioneering work in power distribution, particularly in reducing Aggregate Technical & Commercial (AT&C) losses from 53% to 7%, and leading major technology transformations like the SAP-ISU implementation, garnered international acclaim. He was passionate about using innovation not only to drive business performance but also to uplift underserved communities, earning recognition from institutions such as Harvard, the World Bank, and the Confederation of Indian Industry.",
-      "As the driving force behind social innovation and renewable energy adoption, he laid the foundation for Sun Prime's mission — to promote clean energy, combat climate change, drive digitization, and deliver impactful CSR initiatives.",
+      "As the driving force behind social innovation and renewable energy adoption, he laid the foundation for Sunprime's mission — to promote clean energy, combat climate change, drive digitization, and deliver impactful CSR initiatives.",
       "His legacy of excellence, compassion, and vision continues to guide the company's direction and values. Though he is no longer with us, Mr. Saini's enduring spirit remains the cornerstone of our identity and purpose.",
     ],
     competencies: [
@@ -369,7 +363,7 @@ export const site = {
       "Core member, Global Task Force of Foundations (ISA)",
       "Strong connect with government departments for policy advocacy",
       "Professionally, a Chartered Accountant",
-      "Founded Sun Prime Energy Solutions Pvt. Ltd. in 2016 — an Energy Management Service company focused on Solar EPC, energy storage & O&M",
+      "Founded Sunprime Energy Solutions Pvt. Ltd. in 2016 — an Energy Management Service company focused on Solar EPC, energy storage & O&M",
     ],
   },
   disciplines: [
@@ -387,7 +381,7 @@ export const site = {
     },
     {
       title: "Compliance & advisory",
-      body: "MNRE pathways, DISCOM filings, statutory clearances, and independent feasibility studies.",
+      body: "Subsidy pathways, DISCOM filings, statutory clearances, and independent feasibility studies.",
     },
   ],
   expandedProjects: [
@@ -503,8 +497,8 @@ export const site = {
         body: "A grid-tied plant offsets a large share of your daytime load at a fixed, self-owned cost — insulating you from tariff hikes and demand-charge creep for the next twenty-five years.",
       },
       {
-        title: "Payback in 3–5 years",
-        body: "Against a 25-year asset life, most commercial and industrial rooftops recover their capex within three to five years — the remaining two decades are effectively free energy.",
+        title: "A capex that pays itself back",
+        body: "Against a 25-year asset life, a well-engineered rooftop recovers its capex over its early years — after which it runs on effectively free energy. The exact payback varies with tariff, load, and financing model, so we model it for each site.",
       },
       {
         title: "Accelerated depreciation",
@@ -516,7 +510,7 @@ export const site = {
       },
       {
         title: "Low-maintenance, long-life asset",
-        body: "With Tier-1 modules and disciplined O&M, a well-engineered plant degrades slowly and predictably — protected by 25-year performance warranties.",
+        body: "With Tier-1 modules and disciplined O&M, a well-engineered plant degrades slowly and predictably — protected by 25–30 years performance warranties.",
       },
       {
         title: "Energy security on your own roof",
@@ -535,8 +529,8 @@ export const site = {
         a: "No. For commercial and industrial sites the economics stand on tariff offset and depreciation alone. Subsidy, where applicable, simply shortens an already-attractive payback.",
       },
       {
-        q: "Will it survive twenty-five years on my roof?",
-        a: "A plant engineered for the site's wind zone, with Tier-1 modules and a real O&M plan, is built to. The risk isn't solar — it's a cheap BOM and no maintenance discipline.",
+        q: "How long will the plant last on my roof?",
+        a: "Engineered for your site's wind zone, with Tier-1 modules and a disciplined O&M plan, a well-built plant is designed to perform for decades. Longevity comes down to a bankable BOM and consistent maintenance — both of which we own end to end.",
       },
       {
         q: "Does my roof need to be perfect?",
@@ -562,12 +556,6 @@ export const site = {
     ],
     roles: [
       {
-        title: "Solar Design Engineer",
-        location: "New Delhi",
-        type: "Full-time",
-        body: "Yield modelling, single-line designs, structural and shadow analysis, and BOQ for C&I rooftop and ground-mount plants.",
-      },
-      {
         title: "Project Engineer — EPC",
         location: "Site-based · Pan-India",
         type: "Full-time",
@@ -578,18 +566,6 @@ export const site = {
         location: "Delhi NCR",
         type: "Full-time",
         body: "Preventive and corrective maintenance, performance monitoring, and module-cleaning programmes across the operating fleet.",
-      },
-      {
-        title: "Business Development Manager",
-        location: "New Delhi",
-        type: "Full-time",
-        body: "Engineering-literate BD for commercial, industrial, and institutional clients — consultative, not transactional.",
-      },
-      {
-        title: "Engineering Internship",
-        location: "New Delhi",
-        type: "Internship",
-        body: "Hands-on exposure to design, execution, and O&M for students and recent graduates in electrical or mechanical engineering.",
       },
     ],
   },

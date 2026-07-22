@@ -13,7 +13,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Solar Insights | Engineering, Policy & Operations",
   description:
-    "Field notes on solar EPC engineering, MNRE policy, net-metering, Tier-1 BOM, and O&M — written by Sun Prime Energy Solutions for asset owners, CFOs, and procurement teams.",
+    "Field notes on solar EPC engineering, net-metering, Tier-1 BOM, and O&M — written by Sunprime Energy Solutions for asset owners, CFOs, and procurement teams.",
   alternates: { canonical: `${site.url}/insights` },
 };
 
@@ -29,7 +29,7 @@ export default function InsightsPage() {
           <>
             Field notes from
             <br />
-            <span className="text-ink/55">solar engineering.</span>
+            <span className="bg-gradient-to-r from-amber via-amber-bright to-sun bg-clip-text text-transparent">solar engineering.</span>
           </>
         }
         lead="Short, useful pieces written for the people actually evaluating, buying, or operating solar assets — not for SEO."

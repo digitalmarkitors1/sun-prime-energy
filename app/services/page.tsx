@@ -14,7 +14,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Solar EPC Services | Rooftop, O&M, Advisory",
   description:
-    "Sun Prime Energy Solutions delivers commercial & industrial rooftop solar, turnkey solar EPC, 25-year O&M, and MNRE/DISCOM advisory across India. Tier-1 BOM, in-house engineering, single accountable team.",
+    "Sunprime Energy Solutions delivers commercial & industrial rooftop solar, turnkey solar EPC, 25-year O&M, and DISCOM advisory across India. Tier-1 BOM, in-house engineering, single accountable team.",
   alternates: { canonical: `${site.url}/services` },
 };
 
@@ -28,7 +28,7 @@ export default function ServicesPage() {
           <>
             Four capabilities,
             <br />
-            <span className="text-ink/55">one accountable team.</span>
+            <span className="bg-gradient-to-r from-amber via-amber-bright to-sun bg-clip-text text-transparent">one accountable team.</span>
           </>
         }
         lead="Design, EPC, operations, and compliance handled in-house — so the proposal you approve is the plant we commission and the SLA we run."

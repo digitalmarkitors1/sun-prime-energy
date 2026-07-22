@@ -13,7 +13,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "About | Solar EPC Company in Delhi",
   description:
-    "About Sun Prime Energy Solutions — Delhi-based MNRE channel partner and ISO 9001:2015 certified solar EPC firm engineering grid-tied PV plants for industrial, commercial, and institutional clients across India. 2,000+ kWp delivered.",
+    "About Sunprime Energy Solutions — Delhi-based ISO 9001:2015 certified solar EPC firm engineering grid-tied PV plants for industrial, commercial, and institutional clients across India. 15,000+ kWp delivered.",
   alternates: { canonical: `${site.url}/about` },
 };
 
@@ -27,12 +27,12 @@ export default function AboutPage() {
           <>
             A Delhi-based solar firm,
             <br />
-            <span className="text-ink/55">engineered for the long view.</span>
+            <span className="bg-gradient-to-r from-amber via-amber-bright to-sun bg-clip-text text-transparent">engineered for the long view.</span>
           </>
         }
         lead={
           <>
-            Sun Prime Energy Solutions designs, builds, and operates grid-tied solar PV plants for
+            Sunprime Energy Solutions designs, builds, and operates grid-tied solar PV plants for
             commercial, industrial, and institutional clients across India. We win on bankability
             and yield — not on the lowest price-per-watt.
           </>
@@ -60,14 +60,14 @@ export default function AboutPage() {
               </Reveal>
               <Reveal delay={0.15}>
                 <p>
-                  Sun Prime Energy Solutions works with owners who have decided to take the long view. That changes
+                  Sunprime Energy Solutions works with owners who have decided to take the long view. That changes
                   how we engineer — every plant is yield-modelled before it is sold, and every BOM
                   is specified to be supportable for the warranty term.
                 </p>
               </Reveal>
               <Reveal delay={0.2}>
                 <p>
-                  We are MNRE channel partners and ISO 9001:2015 certified, and we run our own
+                  We are ISO 9001:2015 certified, and we run our own
                   design, EPC, and O&amp;M teams from our Nehru Place office in New Delhi.
                 </p>
               </Reveal>
@@ -79,18 +79,33 @@ export default function AboutPage() {
       {/* Founder */}
       <Section tone="mist" size="loose">
         <Container>
-          <div className="max-w-3xl">
-            <Reveal>
-              <Eyebrow>{site.founder.eyebrow}</Eyebrow>
-            </Reveal>
-            <Reveal delay={0.05} as="h2" className="mt-5 text-balance text-[32px] font-semibold leading-[1.1] tracking-tight md:text-[44px]">
-              {site.founder.name}
-            </Reveal>
-            <Reveal delay={0.1}>
-              <p className="mt-4 text-[13px] uppercase tracking-[0.16em] text-ink/45">
-                {site.founder.role}
-              </p>
-            </Reveal>
+          <div className="grid items-center gap-8 md:grid-cols-12 md:gap-12">
+            <div className="md:col-span-3">
+              <Reveal>
+                <div className="relative aspect-[4/5] w-full max-w-[240px] overflow-hidden rounded-sm bg-ink/5 ring-1 ring-line">
+                  <Image
+                    src="/photos/founder-sk-saini.jpg"
+                    alt="Lt. Mr. S.K. Saini, Founder of Sunprime Energy Solutions"
+                    fill
+                    sizes="240px"
+                    className="object-cover object-top"
+                  />
+                </div>
+              </Reveal>
+            </div>
+            <div className="md:col-span-9">
+              <Reveal>
+                <Eyebrow>{site.founder.eyebrow}</Eyebrow>
+              </Reveal>
+              <Reveal delay={0.05} as="h2" className="mt-5 text-balance text-[32px] font-semibold leading-[1.1] tracking-tight md:text-[44px]">
+                {site.founder.name}
+              </Reveal>
+              <Reveal delay={0.1}>
+                <p className="mt-4 text-[13px] uppercase tracking-[0.16em] text-ink/45">
+                  {site.founder.role}
+                </p>
+              </Reveal>
+            </div>
           </div>
 
           <div className="mt-14 grid gap-14 md:grid-cols-12 md:gap-16">
@@ -216,13 +231,13 @@ export default function AboutPage() {
             </div>
             <div className="md:col-span-5">
               <Reveal>
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-ink/5">
-                  <Image
-                    src="/photos/aerial-utility-farm.jpg"
-                    alt="Aerial view of utility-scale solar farm engineered by Sun Prime Energy Solutions"
-                    fill
-                    sizes="(min-width: 768px) 40vw, 90vw"
-                    className="object-cover"
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-ink/5 ring-1 ring-line">
+                  <iframe
+                    title="Sunprime Energy Solutions office — Devika Tower, Nehru Place, New Delhi"
+                    src="https://www.google.com/maps?q=Devika%20Tower%2C%20Nehru%20Place%2C%20New%20Delhi%20110019&output=embed"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="absolute inset-0 h-full w-full border-0"
                   />
                 </div>
                 <div className="mt-5 text-[13.5px] leading-relaxed text-ink/65">

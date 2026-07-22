@@ -10,7 +10,7 @@ export function ContactForm() {
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const subject = encodeURIComponent("Project enquiry — Sun Prime Energy Solutions");
+    const subject = encodeURIComponent("Project enquiry — Sunprime Energy Solutions");
     const body = encodeURIComponent(
       [
         `Name: ${data.get("name")}`,

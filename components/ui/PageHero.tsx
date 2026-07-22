@@ -14,7 +14,11 @@ export function PageHero({ eyebrow, title, lead, meta }: Props) {
     <section className="relative isolate overflow-hidden bg-mist pt-32 pb-16 md:pt-40 md:pb-24">
       <div
         aria-hidden
-        className="pointer-events-none absolute right-0 top-0 -z-10 h-[420px] w-[420px] -translate-y-24 translate-x-24 rounded-full bg-gradient-to-br from-sun/25 via-amber-bright/10 to-transparent blur-3xl"
+        className="pointer-events-none absolute right-0 top-0 -z-10 h-[420px] w-[420px] -translate-y-24 translate-x-24 rounded-full bg-gradient-to-br from-sun/30 via-amber-bright/15 to-transparent blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -left-24 bottom-0 -z-10 h-[360px] w-[360px] translate-y-24 rounded-full bg-gradient-to-tr from-green-bright/15 via-amber-bright/5 to-transparent blur-3xl"
       />
       <Container>
         <div className="grid gap-10 md:grid-cols-12 md:gap-12">
