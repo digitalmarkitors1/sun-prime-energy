@@ -1,0 +1,31 @@
+# Sunprime Energy — static export (Next.js output: "export", trailingSlash: true)
+
+# --- Custom 404 ---
+ErrorDocument 404 /404.html
+
+# --- Compression ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# --- Caching ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Hashed build assets are immutable — cache hard for a year
+  <FilesMatch "\.(js|css|woff2?|ttf|eot)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Media
+  <FilesMatch "\.(mp4|webm|jpg|jpeg|png|gif|svg|webp|avif|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
+  # HTML should always revalidate so redeploys show up
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>

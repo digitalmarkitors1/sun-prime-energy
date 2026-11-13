@@ -1,6 +1,6 @@
 import { cn } from "@/lib/cn";
 
-type Tone = "mist" | "paper" | "ink";
+type Tone = "mist" | "paper" | "ink" | "sky" | "sun" | "leaf";
 type Props = React.HTMLAttributes<HTMLElement> & {
   tone?: Tone;
   bordered?: boolean;
@@ -10,7 +10,12 @@ type Props = React.HTMLAttributes<HTMLElement> & {
 const toneClass: Record<Tone, string> = {
   mist: "bg-mist text-ink",
   paper: "bg-paper text-ink",
-  ink: "bg-ink text-mist",
+  ink: "bg-night text-mist",
+  // Soft coloured washes — light bases so each section's own gradient
+  // accents and dark (text-ink) content stay legible on top.
+  sky: "bg-bluemist text-ink",
+  sun: "bg-cream text-ink",
+  leaf: "bg-leaf text-ink",
 };
 
 export function Section({
@@ -22,10 +27,10 @@ export function Section({
 }: Props) {
   const py =
     size === "tight"
-      ? "py-12 md:py-16"
+      ? "py-10 md:py-12"
       : size === "loose"
-      ? "py-20 md:py-28"
-      : "py-16 md:py-24";
+      ? "py-14 md:py-20"
+      : "py-12 md:py-16";
   return (
     <section
       className={cn(

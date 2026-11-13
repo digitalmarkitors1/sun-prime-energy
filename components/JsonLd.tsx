@@ -1,5 +1,43 @@
 import { site } from "@/data/site";
 
+export function ArticleJsonLd({
+  title,
+  description,
+  url,
+  image,
+  datePublished,
+  author,
+}: {
+  title: string;
+  description: string;
+  url: string;
+  image: string;
+  datePublished: string;
+  author: string;
+}) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    image: image.startsWith("http") ? image : `${site.url}${image}`,
+    datePublished,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    author: { "@type": "Organization", name: author || site.name },
+    publisher: {
+      "@type": "Organization",
+      name: site.name,
+      logo: { "@type": "ImageObject", url: `${site.url}/logo.png` },
+    },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
 export function OrganizationJsonLd() {
   const data = {
     "@context": "https://schema.org",
@@ -17,7 +55,7 @@ export function OrganizationJsonLd() {
       postalCode: site.contact.postalCode,
       addressCountry: site.contact.country,
     },
-    sameAs: [site.social.linkedin],
+    sameAs: [site.social.linkedin, site.social.facebook, site.social.instagram],
   };
   return (
     <script

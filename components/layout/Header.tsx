@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -12,6 +13,9 @@ import { cn } from "@/lib/cn";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  // On the home hero (dark video) at the top of the page, nav sits over dark footage
+  const onHeroTop = pathname === "/" && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -37,14 +41,19 @@ export function Header() {
       )}
     >
       <Container className="flex h-16 items-center justify-between md:h-20">
-        <Logo />
+        <Logo tone={onHeroTop ? "mist" : "ink"} />
 
         <nav className="hidden items-center gap-8 md:flex">
           {site.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-[13.5px] font-medium text-ink/70 transition-colors hover:text-ink"
+              className={cn(
+                "text-[13.5px] font-medium transition-colors",
+                onHeroTop
+                  ? "text-mist/80 hover:text-white"
+                  : "text-ink/70 hover:text-ink",
+              )}
             >
               {item.label}
             </Link>
@@ -52,13 +61,16 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Button href="/contact" variant="primary" showArrow>
+          <Button href="/contact" variant={onHeroTop ? "amber" : "primary"} showArrow>
             Request a quote
           </Button>
         </div>
 
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full text-ink md:hidden"
+          className={cn(
+            "inline-flex h-10 w-10 items-center justify-center rounded-full transition-colors md:hidden",
+            onHeroTop ? "text-mist" : "text-ink",
+          )}
           aria-label="Open menu"
           onClick={() => setOpen(true)}
         >

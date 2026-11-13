@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function SEOContent() {
   return (
-    <section className="relative isolate overflow-hidden bg-ink text-mist">
+    <section className="relative isolate overflow-hidden bg-night text-mist">
       {/* Full-bleed solar photo */}
       <Image
         src="/photos/aerial-utility-farm.jpg"
@@ -18,7 +18,7 @@ export function SEOContent() {
       {/* Multi-layer overlays — readability + depth */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-br from-ink/95 via-ink/85 to-ink/95"
+        className="absolute inset-0 bg-gradient-to-br from-night/95 via-night/85 to-night/95"
       />
       <div
         aria-hidden

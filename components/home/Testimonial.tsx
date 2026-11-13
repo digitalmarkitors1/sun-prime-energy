@@ -5,7 +5,7 @@ import { site } from "@/data/site";
 
 export function Testimonial() {
   return (
-    <Section tone="paper" size="loose" className="relative overflow-hidden">
+    <Section tone="sun" size="loose" className="relative overflow-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-warm/60 via-cream to-paper"

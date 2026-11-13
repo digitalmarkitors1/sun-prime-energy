@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 
 export function WhyUs() {
   return (
-    <Section tone="paper" size="default" className="relative overflow-hidden">
+    <Section tone="sun" size="default" className="relative overflow-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute -right-40 -top-32 -z-10 h-[440px] w-[440px] rounded-full bg-gradient-to-bl from-warm/60 via-cream/40 to-transparent blur-3xl"

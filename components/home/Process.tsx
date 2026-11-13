@@ -13,7 +13,7 @@ export function Process() {
             <Reveal>
               <Eyebrow tone="mist">Engagement model</Eyebrow>
             </Reveal>
-            <Reveal delay={0.05} as="h2" className="mt-5 text-balance text-[36px] font-semibold leading-[1.1] tracking-tight md:text-[48px]">
+            <Reveal delay={0.05} as="h2" className="mt-4 text-balance text-[28px] font-semibold leading-[1.1] tracking-tight md:text-[38px]">
               From feasibility to first kilowatt-hour, on a single contract.
             </Reveal>
           </div>
@@ -28,10 +28,10 @@ export function Process() {
           </div>
         </div>
 
-        <ol className="mt-12 grid gap-px overflow-hidden bg-mist/10 md:mt-16 md:grid-cols-3">
+        <ol className="mt-8 grid gap-px overflow-hidden bg-mist/10 md:mt-10 md:grid-cols-3">
           {site.process.map((s, i) => (
             <Reveal key={s.title} delay={0.04 * i} as="li" className="block">
-              <div className="group relative h-full overflow-hidden bg-ink p-8 transition-colors duration-300 hover:bg-ink-soft md:p-10">
+              <div className="group relative h-full overflow-hidden bg-night p-6 transition-colors duration-300 hover:bg-[#26385c] md:p-7">
                 <span
                   aria-hidden
                   className="absolute inset-x-0 top-0 h-[2px] origin-left scale-x-0 bg-gradient-to-r from-amber via-amber-bright to-sun transition-transform duration-700 group-hover:scale-x-100"
@@ -40,10 +40,10 @@ export function Process() {
                   aria-hidden
                   className="block h-px w-10 bg-amber-bright transition-all duration-500 group-hover:w-16"
                 />
-                <h3 className="mt-7 text-[22px] font-semibold leading-tight tracking-tight">
+                <h3 className="mt-5 text-[20px] font-semibold leading-tight tracking-tight">
                   {s.title}
                 </h3>
-                <p className="mt-3 text-[14.5px] leading-relaxed text-mist/70">
+                <p className="mt-2.5 text-[14px] leading-relaxed text-mist/70">
                   {s.body}
                 </p>
                 <span

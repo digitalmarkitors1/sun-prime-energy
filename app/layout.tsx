@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { ScrollProgress } from "@/components/ui/ScrollProgress";
 import { site } from "@/data/site";
 
 const inter = Inter({
@@ -19,23 +17,6 @@ export const metadata: Metadata = {
     template: `%s — ${site.shortName}`,
   },
   description: site.description,
-  keywords: [
-    "solar EPC company India",
-    "solar EPC Delhi",
-    "rooftop solar India",
-    "commercial solar EPC",
-    "industrial solar power plant",
-    "ISO 9001 solar company",
-    "solar O&M services",
-    "solar consultancy India",
-    "net metering solar",
-    "ground mount solar EPC",
-    "agrivoltaic India",
-    "Sunprime Energy Solutions",
-    "solar installation Delhi NCR",
-    "solar Haryana",
-    "solar Rajasthan",
-  ],
   authors: [{ name: site.name }],
   openGraph: {
     type: "website",
@@ -59,6 +40,9 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
+  verification: {
+    google: "niIaUvGlwDquFbl1dIUAVJb9cxcZLztWU6griQFK5-4",
+  },
 };
 
 export default function RootLayout({
@@ -69,10 +53,20 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full bg-mist text-ink">
-        <ScrollProgress />
-        <Header />
-        <main className="pt-0">{children}</main>
-        <Footer />
+        {/* Google Analytics 4 (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-9Y13TY6CPK"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9Y13TY6CPK');
+          `}
+        </Script>
+        {children}
       </body>
     </html>
   );

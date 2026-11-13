@@ -4,7 +4,9 @@
   --color-ink: #0A1628;
   --color-ink-soft: #1B2638;
   --color-ink-muted: #475569;
-  --color-mist: #FFFFFF;
+  /* Dark section background — lifted off near-black so the dark bands read softer */
+  --color-night: #1E2E4C;
+  --color-mist: #F5F2EB;
   --color-paper: #FFFFFF;
   --color-stone: #6B7280;
   --color-line: #E7E5E0;
@@ -18,11 +20,17 @@
   --color-green: #1F7A3D;
   --color-green-bright: #2EB14E;
   --color-green-soft: #B7E0BD;
+  /* Light green wash for full-section "leaf" tone (airier than green-soft) */
+  --color-leaf: #EAF4EC;
 
-  --color-cream: #FFFFFF;
-  --color-peach: #FFFFFF;
-  --color-warm: #FFFFFF;
-  --color-bluemist: #EAEEF2;
+  --color-cream: #FBF4E6;
+  --color-peach: #F6DFC2;
+  --color-warm: #F2E7D0;
+  --color-bluemist: #E7EDF4;
+
+  /* Brand: blue side — matches the logo's blue, pairs with amber/green accents */
+  --color-blue: #2563AC;
+  --color-blue-bright: #3B82D6;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -84,4 +92,120 @@
     from { transform: scaleX(0); }
     to   { transform: scaleX(1); }
   }
+}
+
+/* Blog article body — styled output of the Markdown renderer */
+.article-body > * + * { margin-top: 1.25em; }
+.article-body h2 {
+  margin-top: 1.9em;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+.article-body h3 {
+  margin-top: 1.5em;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+.article-body p { color: color-mix(in srgb, var(--color-ink) 80%, transparent); }
+.article-body a {
+  color: var(--color-amber);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.article-body a:hover { color: var(--color-amber-bright); }
+.article-body strong { color: var(--color-ink); font-weight: 600; }
+.article-body ul, .article-body ol { padding-left: 1.4em; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li { margin-top: 0.4em; }
+.article-body li::marker { color: color-mix(in srgb, var(--color-ink) 40%, transparent); }
+.article-body blockquote {
+  border-left: 3px solid var(--color-amber);
+  padding-left: 1.1em;
+  font-style: italic;
+  color: color-mix(in srgb, var(--color-ink) 65%, transparent);
+}
+.article-body img {
+  border-radius: 2px;
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  height: auto;
+}
+.article-body code {
+  background: var(--color-mist);
+  border: 1px solid var(--color-line);
+  border-radius: 3px;
+  padding: 0.1em 0.35em;
+  font-size: 0.9em;
+}
+.article-body pre {
+  background: var(--color-night);
+  color: var(--color-mist);
+  border-radius: 4px;
+  padding: 1em 1.2em;
+  overflow-x: auto;
+  font-size: 0.9em;
+}
+.article-body pre code { background: none; border: none; padding: 0; }
+.article-body hr { border: 0; border-top: 1px solid var(--color-line); }
+
+/* Blog tables — shared by the rendered article and the editor */
+.article-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.4em 0;
+  font-size: 0.95em;
+}
+.article-body th,
+.article-body td {
+  border: 1px solid var(--color-line);
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+.article-body th {
+  background: var(--color-mist);
+  font-weight: 600;
+}
+
+/* WYSIWYG editor content area */
+.rte-content {
+  min-height: 300px;
+  max-height: 560px;
+  overflow-y: auto;
+  padding: 16px 18px;
+  outline: none;
+}
+.rte-content:focus { outline: none; }
+.rte-content > * + * { margin-top: 0.9em; }
+.rte-content p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  color: #9ca3af;
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+.rte-content .tableWrapper { overflow-x: auto; }
+.rte-content table { table-layout: fixed; }
+.rte-content .selectedCell { background: rgba(215, 112, 25, 0.1); }
+.rte-content img.ProseMirror-selectednode { outline: 2px solid var(--color-amber); }
+
+/* Embedded video (YouTube) — responsive 16:9, in editor + rendered article */
+.article-body iframe,
+.rte-content iframe,
+.article-body div[data-youtube-video] iframe,
+.rte-content div[data-youtube-video] iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  border-radius: 8px;
+  margin: 1.6em 0;
+  display: block;
 }

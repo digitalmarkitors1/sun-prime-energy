@@ -10,7 +10,7 @@ import { site } from "@/data/site";
 
 export function Projects() {
   return (
-    <Section tone="mist" size="default">
+    <Section tone="sky" size="default">
       <Container>
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">

@@ -30,10 +30,14 @@ export function FinalCTA() {
   }
 
   return (
-    <Section tone="mist" size="default" className="relative overflow-hidden">
+    <Section tone="sun" size="default" className="relative overflow-hidden">
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 right-0 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-amber-bright/15 via-sun/10 to-transparent blur-3xl"
+        className="pointer-events-none absolute -top-32 right-0 h-[420px] w-[420px] rounded-full bg-gradient-to-br from-amber-bright/25 via-sun/15 to-transparent blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -bottom-32 -left-24 h-[420px] w-[420px] rounded-full bg-gradient-to-tr from-blue/20 via-blue-bright/10 to-transparent blur-3xl"
       />
       <Container>
         <div className="grid gap-14 md:grid-cols-12 md:gap-16">
@@ -74,7 +78,7 @@ export function FinalCTA() {
                 onSubmit={onSubmit}
                 className="grain relative grid gap-px overflow-hidden rounded-md bg-ink shadow-[0_30px_60px_-20px_rgba(10,22,40,0.35)]"
               >
-                <span aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-amber to-transparent" />
+                <span aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-blue-bright via-amber to-green-bright" />
                 <div className="grid gap-px md:grid-cols-2">
                   <FieldInput name="name" label="Full name" required />
                   <FieldInput name="company" label="Company" required />

@@ -1,53 +1,38 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/layout/Logo";
 import { site } from "@/data/site";
+import { landingPages } from "@/data/landingPages";
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-ink text-mist">
-      {/* Photo accent header */}
-      <div className="relative h-[200px] w-full overflow-hidden md:h-[280px]">
-        <Image
-          src="/photos/aerial-utility-farm.jpg"
-          alt="Aerial view of a utility-scale solar PV plant engineered by Sunprime Energy Solutions in India"
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink/35 via-ink/65 to-ink" />
-        <div className="absolute inset-x-0 bottom-0">
-          <Container className="pb-7">
-            <div className="flex items-center gap-3 text-mist">
-              <span aria-hidden className="h-px w-12 bg-amber" />
-              <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-mist/70">
-                Engineering renewable infrastructure across India
-              </span>
-            </div>
-          </Container>
-        </div>
-      </div>
+    <footer className="bg-night text-mist">
+      <div className="grain border-t border-mist/10">
+        <Container className="pt-12">
+          {/* Tagline */}
+          <div className="mb-8 flex items-center gap-3">
+            <span aria-hidden className="h-px w-10 bg-amber" />
+            <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-mist/55">
+              Engineering renewable infrastructure across India
+            </span>
+          </div>
 
-      <div className="grain">
-        <Container className="pt-16">
           {/* Brand zone */}
-          <div className="grid items-end gap-12 border-b border-mist/10 pb-14 md:grid-cols-12 md:gap-10">
+          <div className="grid items-end gap-6 border-b border-mist/10 pb-9 md:grid-cols-12 md:gap-10">
             <div className="md:col-span-7">
               <Logo tone="mist" size="lg" />
-              <h3 className="mt-7 text-balance text-[32px] font-semibold leading-[1.05] tracking-tight md:text-[44px]">
-                Solar engineered to outlive
-                <br />
+              <h3 className="mt-5 text-balance text-[20px] font-semibold leading-[1.15] tracking-tight md:text-[26px]">
+                Solar engineered to outlive{" "}
                 <span className="bg-gradient-to-r from-amber-bright via-sun to-amber bg-clip-text text-transparent">
                   the expectations on day one.
                 </span>
               </h3>
             </div>
             <div className="md:col-span-5">
-              <p className="max-w-md text-[15px] leading-relaxed text-mist/65">
+              <p className="max-w-md text-[14px] leading-relaxed text-mist/65">
                 Sunprime Energy Solutions designs, builds, and operates grid-tied solar PV plants for commercial,
                 industrial, and institutional clients across India — from feasibility through
                 twenty-five years of operations.
@@ -64,81 +49,38 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Nav zone */}
-          <div className="grid gap-12 border-b border-mist/10 py-14 md:grid-cols-12 md:gap-8">
-            <div className="md:col-span-3">
-              <h4 className="text-[11px] font-medium uppercase tracking-[0.18em] text-mist/40">
-                Capabilities
-              </h4>
-              <ul className="mt-6 space-y-3.5 text-[14.5px] text-mist/80">
-                {site.services.map((s) => (
-                  <li key={s.slug}>
-                    <Link
-                      href={`/services#${s.slug}`}
-                      className="group inline-flex items-center gap-2 transition-colors hover:text-amber-bright"
-                    >
-                      <span aria-hidden className="h-px w-3 bg-mist/30 transition-all group-hover:w-5 group-hover:bg-amber" />
-                      <span>{s.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="md:col-span-3">
-              <h4 className="text-[11px] font-medium uppercase tracking-[0.18em] text-mist/40">
-                Industries
-              </h4>
-              <ul className="mt-6 space-y-3.5 text-[14.5px] text-mist/80">
-                {site.industries.slice(0, 6).map((ind) => (
-                  <li key={ind.slug}>
-                    <Link href="/services" className="transition-colors hover:text-amber-bright">
-                      {ind.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="md:col-span-3">
-              <h4 className="text-[11px] font-medium uppercase tracking-[0.18em] text-mist/40">
-                Company
-              </h4>
-              <ul className="mt-6 space-y-3.5 text-[14.5px] text-mist/80">
-                <li><Link href="/about" className="transition-colors hover:text-amber-bright">About Sunprime Energy Solutions</Link></li>
-                <li><Link href="/projects" className="transition-colors hover:text-amber-bright">Projects</Link></li>
-                <li><Link href="/insights" className="transition-colors hover:text-amber-bright">Insights</Link></li>
-                <li><Link href="/contact" className="transition-colors hover:text-amber-bright">Contact</Link></li>
-              </ul>
-            </div>
-
-            <div className="md:col-span-3">
-              <h4 className="text-[11px] font-medium uppercase tracking-[0.18em] text-mist/40">
-                Service areas
-              </h4>
-              <p className="mt-6 text-[14px] font-medium tracking-tight text-mist/85">
-                Pan-India delivery
-              </p>
-              <ul className="mt-4 grid grid-cols-2 gap-x-3 gap-y-2.5 text-[13.5px] text-mist/70">
-                {site.serviceAreas.map((s) => (
-                  <li key={s}>{s}</li>
-                ))}
-              </ul>
-            </div>
+          {/* Solutions zone */}
+          <div className="border-b border-mist/10 py-9">
+            <h4 className="text-[11px] font-medium uppercase tracking-[0.18em] text-mist/40">
+              Solar solutions
+            </h4>
+            <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2.5 text-[14px] text-mist/80 sm:grid-cols-3 lg:grid-cols-4">
+              {Object.values(landingPages).map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/${p.slug}`}
+                    className="group inline-flex items-center gap-2 transition-colors hover:text-amber-bright"
+                  >
+                    <span aria-hidden className="h-px w-3 bg-mist/30 transition-all group-hover:w-5 group-hover:bg-amber" />
+                    <span>{p.navLabel}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Credentials zone */}
-          <div className="grid gap-5 border-b border-mist/10 py-12 md:grid-cols-3">
+          <div className="grid gap-4 border-b border-mist/10 py-8 md:grid-cols-3">
             {site.certifications.map((c) => (
               <div
                 key={c.code}
-                className="group relative flex h-full items-start gap-4 overflow-hidden rounded-md border border-mist/12 bg-ink-soft/50 p-5 transition-all hover:-translate-y-0.5 hover:border-green-bright/50 hover:bg-ink-soft/70"
+                className="group relative flex h-full items-start gap-4 overflow-hidden rounded-md border border-mist/12 bg-ink-soft/50 p-4 transition-all hover:-translate-y-0.5 hover:border-green-bright/50 hover:bg-ink-soft/70"
               >
                 <span
                   aria-hidden
-                  className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-gradient-to-r from-green-bright via-amber to-sun transition-transform duration-700 group-hover:scale-x-100"
+                  className="absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-gradient-to-r from-blue-bright via-green-bright to-amber transition-transform duration-700 group-hover:scale-x-100"
                 />
-                <span aria-hidden className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-green-bright shadow-[0_0_12px_rgba(43,169,104,0.7)]" />
+                <span aria-hidden className="mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-blue-bright shadow-[0_0_12px_rgba(59,130,246,0.7)]" />
                 <div className="flex flex-col">
                   <div className="text-[14.5px] font-semibold leading-tight tracking-tight text-mist">
                     {c.code}
@@ -152,7 +94,7 @@ export function Footer() {
           </div>
 
           {/* Contact strip */}
-          <div className="grid gap-10 py-12 md:grid-cols-3 md:gap-8">
+          <div className="grid gap-6 py-8 md:grid-cols-3 md:gap-8">
             <div className="flex items-start gap-4">
               <MapPin size={18} className="mt-1 flex-shrink-0 text-amber" />
               <div>
@@ -201,7 +143,7 @@ export function Footer() {
           </div>
 
           {/* Bottom strip */}
-          <div className="flex flex-col-reverse items-start justify-between gap-4 border-t border-mist/10 py-7 md:flex-row md:items-center">
+          <div className="flex flex-col-reverse items-start justify-between gap-4 border-t border-mist/10 py-6 md:flex-row md:items-center">
             <div className="flex flex-col gap-1.5 text-[12px] text-mist/45 md:flex-row md:items-center md:gap-3">
               <p>© {year} {site.legalName}. All rights reserved.</p>
               <span aria-hidden className="hidden h-3 w-px bg-mist/15 md:inline-block" />
@@ -217,7 +159,7 @@ export function Footer() {
                 </a>
               </p>
             </div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center gap-4">
               <a
                 href={site.social.linkedin}
                 target="_blank"
@@ -230,11 +172,26 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href={`mailto:${site.contact.email}`}
-                aria-label="Email"
+                href={site.social.facebook}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Facebook"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-mist/15 text-mist/60 transition-all hover:border-amber-bright hover:text-amber-bright"
               >
-                <Mail size={14} />
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5">
+                  <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.85c0-2.51 1.49-3.9 3.78-3.9 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.9h-2.34V22c4.78-.79 8.43-4.94 8.43-9.94z" />
+                </svg>
+              </a>
+              <a
+                href={site.social.instagram}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="Instagram"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-mist/15 text-mist/60 transition-all hover:border-amber-bright hover:text-amber-bright"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5">
+                  <path d="M12 2c2.72 0 3.06.01 4.12.06 1.07.05 1.8.22 2.43.47.66.25 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.63.42 1.36.47 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.07-.22 1.8-.47 2.43a4.9 4.9 0 01-1.15 1.77c-.55.55-1.11.9-1.77 1.15-.63.25-1.36.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.07-.05-1.8-.22-2.43-.47a4.9 4.9 0 01-1.77-1.15 4.9 4.9 0 01-1.15-1.77c-.25-.63-.42-1.36-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.07.22-1.8.47-2.43.25-.66.6-1.22 1.15-1.77.55-.55 1.11-.9 1.77-1.15.63-.25 1.36-.42 2.43-.47C8.94 2.01 9.28 2 12 2zm0 1.8c-2.67 0-2.99.01-4.04.06-.98.04-1.5.21-1.86.35-.47.18-.8.4-1.15.75-.35.35-.57.68-.75 1.15-.14.36-.31.88-.35 1.86-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.04.98.21 1.5.35 1.86.18.47.4.8.75 1.15.35.35.68.57 1.15.75.36.14.88.31 1.86.35 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.98-.04 1.5-.21 1.86-.35.47-.18.8-.4 1.15-.75.35-.35.57-.68.75-1.15.14-.36.31-.88.35-1.86.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.98-.21-1.5-.35-1.86a3.1 3.1 0 00-.75-1.15 3.1 3.1 0 00-1.15-.75c-.36-.14-.88-.31-1.86-.35-1.05-.05-1.37-.06-4.04-.06zm0 3.06A5.14 5.14 0 1112 17.14 5.14 5.14 0 0112 6.86zm0 1.8a3.34 3.34 0 100 6.68 3.34 3.34 0 000-6.68zm5.34-.94a1.2 1.2 0 11-2.4 0 1.2 1.2 0 012.4 0z" />
+                </svg>
               </a>
             </div>
           </div>

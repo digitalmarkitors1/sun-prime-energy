@@ -13,7 +13,7 @@ export function HomeFAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <Section tone="mist" size="default" className="relative overflow-hidden">
+    <Section tone="leaf" size="default" className="relative overflow-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute -left-40 bottom-0 -z-10 h-[420px] w-[420px] rounded-full bg-gradient-to-tr from-bluemist/60 via-mist to-transparent blur-3xl"

@@ -6,12 +6,31 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "seed": "tsx scripts/seed-supabase.mjs",
+    "pull": "node scripts/pull-content.mjs",
+    "deploy": "bash scripts/deploy-hostinger.sh",
+    "publish": "npm run pull && next build && rm -f sunprime-site.zip && (cd out && zip -rq ../sunprime-site.zip .) && echo '\\n✔ Built + zipped → sunprime-site.zip  (upload its CONTENTS to Hostinger public_html)'"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
+    "@tiptap/extension-image": "^3.32.2",
+    "@tiptap/extension-link": "^3.32.2",
+    "@tiptap/extension-placeholder": "^3.32.2",
+    "@tiptap/extension-table": "^3.32.2",
+    "@tiptap/extension-table-cell": "^3.32.2",
+    "@tiptap/extension-table-header": "^3.32.2",
+    "@tiptap/extension-table-row": "^3.32.2",
+    "@tiptap/extension-text-align": "^3.32.2",
+    "@tiptap/extension-underline": "^3.32.2",
+    "@tiptap/extension-youtube": "^3.32.2",
+    "@tiptap/pm": "^3.32.2",
+    "@tiptap/react": "^3.32.2",
+    "@tiptap/starter-kit": "^3.32.2",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.14.0",
+    "marked": "^18.1.0",
     "next": "16.2.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -25,6 +44,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }

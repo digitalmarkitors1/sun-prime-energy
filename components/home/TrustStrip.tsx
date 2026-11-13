@@ -4,7 +4,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function TrustStrip() {
   return (
-    <section className="relative border-y border-line bg-paper py-16 md:py-20">
+    <section className="relative border-y border-line bg-sun-tint py-16 md:py-20">
       <div
         aria-hidden
         className="pointer-events-none absolute right-0 top-0 h-full w-1/3 -z-10 bg-gradient-to-bl from-warm/40 via-cream/20 to-transparent"
