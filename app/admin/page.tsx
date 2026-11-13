@@ -14,6 +14,7 @@ import { LandingTab } from "@/components/admin/LandingTab";
 import { BlogTab } from "@/components/admin/BlogTab";
 import { SeoTab } from "@/components/admin/SeoTab";
 import { MediaTab } from "@/components/admin/MediaTab";
+import { PublishTab } from "@/components/admin/PublishTab";
 import { Btn, Field, Input, Spinner } from "@/components/admin/kit";
 import { FileText, Globe, Newspaper, Search, Image as ImageIcon, Rocket, LogOut, Sun } from "lucide-react";
 
@@ -104,7 +105,7 @@ export default function AdminPage() {
         {tab === "blog" && <BlogTab />}
         {tab === "seo" && <SeoTab />}
         {tab === "media" && <MediaTab />}
-        {tab === "publish" && <PublishHelp />}
+        {tab === "publish" && <PublishTab />}
       </main>
     </div>
   );
@@ -172,41 +173,6 @@ SUPABASE_SERVICE_ROLE_KEY=eyJ...   # for seeding only`}
         <li>Create an admin user in Supabase → Authentication → Users</li>
         <li>Run <code className="rounded bg-neutral-100 px-1">npm run seed</code> to load current content</li>
       </ol>
-    </div>
-  );
-}
-
-function PublishHelp() {
-  return (
-    <div className="max-w-2xl">
-      <h2 className="mb-2 text-lg font-semibold">Publishing changes to the live site</h2>
-      <p className="mb-4 text-sm text-neutral-600">
-        Edits you save here are stored in the database instantly, but the public
-        site is static HTML on Hostinger. To push your saved changes live, run
-        one command on the project, then upload the result.
-      </p>
-      <ol className="space-y-4 text-sm text-neutral-700">
-        <li>
-          <p className="font-medium">1. Build with the latest content</p>
-          <pre className="mt-1 overflow-x-auto rounded-lg bg-neutral-900 p-3 text-xs text-neutral-100">npm run publish</pre>
-          <p className="mt-1 text-neutral-500">
-            Pulls the newest content from the database, rebuilds the static site,
-            and zips it to <code className="rounded bg-neutral-100 px-1">sunprime-site.zip</code>.
-          </p>
-        </li>
-        <li>
-          <p className="font-medium">2. Upload to Hostinger</p>
-          <p className="mt-1 text-neutral-500">
-            In Hostinger File Manager, open <code className="rounded bg-neutral-100 px-1">public_html</code>,
-            delete the old files, and upload the <strong>contents</strong> of the
-            zip (or the <code className="rounded bg-neutral-100 px-1">out/</code> folder).
-          </p>
-        </li>
-      </ol>
-      <p className="mt-6 rounded-lg border border-amber-200 bg-amber-50 p-3 text-xs text-amber-800">
-        Tip: keep edits saved here as you go. The build always uses whatever was
-        last saved in the database.
-      </p>
     </div>
   );
 }
