@@ -1,0 +1,81 @@
+name: Publish to Hostinger
+
+# Runs every 5 minutes: checks the database for a pending "Publish" request
+# (set by the button in /admin). Only builds + uploads when there's something
+# new — so most runs are a quick check that costs nothing. Also runnable
+# manually from the Actions tab (forces a publish).
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/5 * * * *"
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.decide.outputs.go }}
+    steps:
+      - id: decide
+        env:
+          URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"; echo "Manual run → publishing."; exit 0
+          fi
+          row=$(curl -s "$URL/rest/v1/sunprime_content_singletons?key=eq.publish&select=data" -H "apikey: $KEY" -H "Authorization: Bearer $KEY")
+          req=$(echo "$row" | grep -o '"requestedAt":"[^"]*"' | head -1 | cut -d'"' -f4)
+          pub=$(echo "$row" | grep -o '"publishedAt":"[^"]*"' | head -1 | cut -d'"' -f4)
+          echo "requested=$req published=$pub"
+          if [ -n "$req" ] && [ "$req" != "$pub" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"; echo "New publish request → building."
+          else
+            echo "go=false" >> "$GITHUB_OUTPUT"; echo "Nothing to publish."
+          fi
+
+  deploy:
+    needs: check
+    if: needs.check.outputs.go == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run pull
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      - run: cp deploy/.htaccess out/.htaccess
+      - name: Upload to Hostinger (rsync over SSH)
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "${{ secrets.HOSTINGER_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -p 65002 145.223.17.220 >> ~/.ssh/known_hosts 2>/dev/null
+          rsync -az --delete -e "ssh -p 65002 -i ~/.ssh/id_ed25519" \
+            out/ u698055513@145.223.17.220:~/domains/sunpesolutions.com/public_html/
+      - name: Mark published
+        env:
+          URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: |
+          now=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          row=$(curl -s "$URL/rest/v1/sunprime_content_singletons?key=eq.publish&select=data" -H "apikey: $KEY" -H "Authorization: Bearer $KEY")
+          req=$(echo "$row" | grep -o '"requestedAt":"[^"]*"' | head -1 | cut -d'"' -f4)
+          curl -s -X POST "$URL/rest/v1/sunprime_content_singletons" \
+            -H "apikey: $KEY" -H "Authorization: Bearer $KEY" \
+            -H "Content-Type: application/json" -H "Prefer: resolution=merge-duplicates" \
+            -d "{\"key\":\"publish\",\"data\":{\"requestedAt\":\"${req:-$now}\",\"publishedAt\":\"$now\"}}" >/dev/null
+          echo "Marked published at $now"
+      - name: Verify
+        run: curl -s -o /dev/null -w "live /blog → HTTP %{http_code}\n" https://sunpesolutions.com/blog/
