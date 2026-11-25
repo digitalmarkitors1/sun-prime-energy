@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
     "author": "Sunprime Energy Solutions",
     "coverImage": "/photos/aerial-utility-farm.jpg",
     "published": true,
-    "featured": true,
+    "featured": false,
     "publishedAt": "2026-10-08",
     "sortOrder": 0
   },
@@ -135,6 +135,20 @@ export const blogPosts: BlogPost[] = [
     "featured": false,
     "publishedAt": "2026-11-09",
     "sortOrder": 7
+  },
+  {
+    "slug": "solar-epc-company-in-delhi-demo",
+    "title": "solar epc company in delhi demo",
+    "excerpt": "",
+    "body": "<p>dsdsdsdsahdsauihdiusadiusaidsaiudsahdiuhsaidhiushdshidhsaudhisahdsa</p>",
+    "category": "",
+    "readTime": "",
+    "author": "Sunprime Energy Solutions",
+    "coverImage": "",
+    "published": true,
+    "featured": false,
+    "publishedAt": "2026-11-13",
+    "sortOrder": 8
   }
 ];
 

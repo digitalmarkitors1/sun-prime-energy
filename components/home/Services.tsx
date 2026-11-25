@@ -28,8 +28,10 @@ export function Services() {
           <div className="md:col-span-5">
             <Reveal delay={0.1}>
               <p className="text-[16px] leading-relaxed text-ink/65">
-                Design, EPC, operations, and compliance handled in-house — so the proposal you
-                approve is the plant we commission and the SLA we run.
+                Accurate, cost-effective designs that maintain quality standards, with EPC,
+                operations, and compliance all handled in-house. Once the proposal is approved, you
+                get instant access to solar power installation specialists who commission the plant
+                and manage the SLA.
               </p>
             </Reveal>
           </div>

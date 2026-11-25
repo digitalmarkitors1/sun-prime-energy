@@ -59,26 +59,31 @@ export function SEOContent() {
               <Reveal delay={0.1}>
                 <p>
                   <strong className="font-semibold text-mist">Sunprime Energy Solutions</strong> is a Delhi-based
-                  solar EPC company delivering{" "}
-                  <Link href="/services#rooftop-solar" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">commercial &amp; industrial rooftop solar</Link>,{" "}
-                  <Link href="/services#epc" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">turnkey solar EPC</Link>,{" "}
+                  commercial solar company providing{" "}
+                  <Link href="/services#rooftop-solar" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">residential, commercial, and industrial rooftop solar installations</Link>, along with{" "}
+                  <Link href="/services#epc" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">turnkey solar EPC</Link> solutions,{" "}
                   <Link href="/services#om" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">25-year solar O&amp;M</Link>, and{" "}
                   <Link href="/services#advisory" className="underline-offset-4 transition-colors hover:text-amber-bright hover:underline">solar advisory</Link>{" "}
                   services across India. With more than 15,000 kWp of solar PV capacity engineered, built, and
-                  operated for clients spanning manufacturing, education, healthcare, hospitality, warehousing,
-                  and agrivoltaic sectors, we deliver bankable solar assets that earn for their owners across
-                  decades — not quarters.
+                  operated, we have an extensive service network spanning India and serve sectors such as
+                  manufacturing, education, healthcare, hospitality, warehousing, and agrivoltaics. We deliver
+                  efficient and sustainable rooftop solar for businesses and bankable solar assets that earn for
+                  their owners across decades — not quarters.
                 </p>
               </Reveal>
 
               <Reveal delay={0.15}>
                 <p>
-                  As an <strong className="font-semibold text-mist">ISO 9001:2015 certified solar company</strong>, we
-                  own every step of the project lifecycle — site survey, yield modelling, structural and
-                  electrical engineering, BOQ specification, DISCOM net-metering, subsidy facilitation,
-                  EPC execution, and performance-rated O&amp;M with remote monitoring. We work directly with
-                  Tier-1 component manufacturers, so the BOM in your proposal is the BOM commissioned
-                  on your roof.
+                  As an <strong className="font-semibold text-mist">ISO 9001:2015-certified solar company</strong>, we
+                  take ownership of every step of the project lifecycle — from a thorough site survey, yield
+                  modelling, structural and electrical engineering, and BOQ specification to assessing grid
+                  connectivity, regulatory compliance, DISCOM net metering, subsidy facilitation, EPC execution,
+                  and comprehensive Operations &amp; Maintenance (O&amp;M). Our O&amp;M services include advanced
+                  technologies such as waterless robotic cleaning and remote monitoring. We work directly with
+                  Tier-1 component manufacturers and assess the technical fit, quality readiness, and production
+                  capabilities of the components to ensure the right ones are selected for each project. The BOM
+                  specified in your proposal is the same BOM commissioned on your rooftop, ensuring transparency
+                  between what is proposed and what is actually installed.
                 </p>
               </Reveal>
             </div>

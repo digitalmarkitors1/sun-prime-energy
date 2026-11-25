@@ -21,13 +21,16 @@ export function TrustStrip() {
               Every plant we commission is built on{" "}
               <span className="bg-gradient-to-r from-amber via-amber-bright to-sun bg-clip-text text-transparent">
                 Tier-1 components
-              </span>
-              .
+              </span>{" "}
+              and typically follows established engineering practices.
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-5 max-w-md text-[15px] leading-relaxed text-ink/65">
-                Sourced directly from manufacturers we can support across the twenty-five-year
-                warranty term. No relabelled imports. No tier-2 substitution at commissioning.
+                Our commercial and industrial rooftop solutions are built around the specific
+                requirements of each facility, with components sourced directly from manufacturers.
+                This ensures a seamless transition to clean energy, backed by comprehensive support
+                throughout the 25-year warranty term. No relabelled imports. No tier-2 substitution
+                at commissioning.
               </p>
             </Reveal>
           </div>

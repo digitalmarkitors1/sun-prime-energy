@@ -188,20 +188,28 @@ export const site = {
   "tagline": "Engineered solar for industry, infrastructure, and institutions.",
   "homeFaqs": [
     {
-      "a": "Prices vary with roof type, structural readiness, BOM choices, and applicable subsidies. Sunprime Energy Solutions issues a fixed-price BOQ after the site survey — a firm number for your site, with no surprise variations during execution.",
+      "a": "It depends on panel technology used, inverter brand, quality of mounting frame used, installation difficulty, roof type, roof readiness for installation, choice of BOM, and available incentives. Sunprime Energy Solutions issues a fixed-price BOQ after the site survey — a firm, site-specific figure that converts your project design into a priced, quantified, tender-formatted Bill of Quantities (BOQ) that you can bid against, with no surprise variations during execution.",
       "q": "What does a rooftop solar EPC project cost in India?"
     },
     {
-      "a": "We work with Tier-1 ALMM approved module manufacturers. Every BOM names OEM and model — no generic placeholders.",
-      "q": "Which OEMs do you specify in your BOM?"
+      "a": "We use certified Tier-1 OEMs and models of solar PV panels. All our BOMs show the OEM and model name without any generic term, thus making product selection, procurement and project execution easier.",
+      "q": "What OEMs do you specify in your BOM?"
     },
     {
-      "a": "Yes. Our Solar O&M practice onboards existing rooftop and ground-mount plants — whether built by another EPC or an in-house team — and runs them under PR-based SLAs with remote monitoring.",
+      "a": "Yes. Our Solar O&M practice onboards existing rooftop and ground-mount plants, whether built by another EPC or an in-house team, to keep operations running smoothly and ensure uninterrupted energy production. We manage these plants under PR-based SLAs with remote monitoring, helping clients maintain reliable performance as they expand their renewable energy footprint.",
       "q": "Do you operate solar plants you didn't build?"
     },
     {
-      "a": "Across India. From our Delhi office, we deliver commercial, industrial, and institutional solar projects nationwide.",
+      "a": "Across India. As a commercial and industrial solar rooftop specialist, we deliver customized rooftop solar solutions for industrial and institutional projects nationwide, helping businesses reduce operational costs.",
       "q": "Where in India do you take on projects?"
+    },
+    {
+      "a": "The cost depends on factors such as the size of the solar system, type of equipment, roof condition, installation requirements, structural readiness, module and inverter selection, electrical requirements, and applicable subsidies. Sunprime Energy Solutions conducts a site assessment to understand your project requirements and provides a detailed BOQ tailored to the specific needs of the project, helping maximise energy independence in the long haul while reducing your carbon footprint.",
+      "q": "What factors affect the cost of a commercial rooftop solar system?"
+    },
+    {
+      "a": "With solar panels for commercial buildings, businesses can convert dead space into productive space and generate electricity during working hours. This helps offset electricity purchased from the grid and cut monthly electricity bills. At Sunprime Energy Solutions, we size solar systems based on the facility's load profile and energy requirements, helping businesses reduce electricity costs associated with daytime consumption. Where applicable, surplus power can also be credited through net metering.",
+      "q": "How does commercial rooftop solar help reduce electricity costs?"
     }
   ],
   "insights": [
@@ -293,44 +301,44 @@ export const site = {
       "slug": "rooftop-solar",
       "title": "Commercial & Industrial Rooftop Solar",
       "bullets": [
-        "Structural & shadow analysis",
+        "Structure and shadow analysis",
         "Net-metering compliant designs",
-        "Tier-1 modules and inverters"
+        "Tier 1 modules and inverters"
       ],
-      "summary": "Grid-tied and hybrid solar PV systems engineered for commercial, industrial, and institutional rooftops across India — designed around long-term yield, not lowest BOM."
+      "summary": "Grid connected and hybrid solar PV systems engineered for commercial spaces, industries and institutional rooftops across India. Our commercial and industrial solar rooftop solutions are designed using the latest technology to deliver long-term energy yield, rather than focusing solely on the lowest BOM cost."
     },
     {
       "no": "02",
       "slug": "epc",
       "title": "Solar EPC & Turnkey Execution",
       "bullets": [
-        "In-house design & MEP",
+        "Inhouse design and MEP",
         "DGS&D-grade BOQ",
-        "Single-window project ownership"
+        "Single window project ownership"
       ],
-      "summary": "End-to-end solar engineering, procurement, and construction — civil works, mounting structures, DC/AC electricals, and commissioning under a single accountable team."
+      "summary": "End-to-end solar design and engineering, equipment procurement, commercial solar system installation, and construction — including civil works, mounting structures, DC/AC electricals, and commissioning — all handled by a single accountable team and a responsible commercial solar EPC company. This eliminates coordination complexities and ensures clear accountability throughout the project."
     },
     {
       "no": "03",
       "slug": "om",
       "title": "Solar Operations & Maintenance",
       "bullets": [
-        "Remote monitoring & alerts",
+        "Remote monitoring and alerts",
         "PR-based performance SLAs",
-        "Preventive & corrective AMC"
+        "Preventive and corrective AMC"
       ],
-      "summary": "Performance-monitored solar O&M with remote analytics, PR reporting, and predictable SLAs — protecting plant yield across its 25-year service life."
+      "summary": "Solar panels are constantly exposed to environmental factors such as dust, pollution, heat, and humidity, which can significantly impact their efficiency. We provide regular panel maintenance and performance-monitored solar O&M with remote analytics to ensure these systems operate at peak efficiency. With PR reporting and predictable SLAs, our O&M services help protect plant yield throughout its 25-year service life."
     },
     {
       "no": "04",
       "slug": "advisory",
       "title": "Solar Advisory, Subsidy & Compliance",
       "bullets": [
-        "State & central subsidy support",
-        "DISCOM & net-metering",
-        "Regulatory & statutory filings"
+        "State and central subsidy support",
+        "DISCOM and net metering",
+        "Regulatory and statutory filings"
       ],
-      "summary": "Subsidy facilitation, DISCOM net-metering, statutory clearances, and feasibility studies — engineered off your project's critical path so commissioning stays on schedule."
+      "summary": "Subsidy facilitation to reduce the upfront cost of installing rooftop solar for businesses, along with DISCOM net metering, statutory clearances, and feasibility studies. We ensure quick commissioning through comprehensive load analysis, engineering design, and equipment procurement, while providing expert solar advisory."
     }
   ],
   "whySolar": {
@@ -399,37 +407,37 @@ export const site = {
   "industries": [
     {
       "img": "/photos/hero-industrial-rooftop.jpg",
-      "body": "Large rooftop or ground-mount plants for plants, factories, and process facilities — sized to flatten Tariff Schedule peaks.",
+      "body": "Reliable solar power for manufacturing plants and industrial use that maximizes production efficiency and long-term savings.",
       "slug": "manufacturing",
       "title": "Manufacturing & Industrial"
     },
     {
       "img": "/photos/rooftop-commercial.jpg",
-      "body": "Schools, colleges, and universities — campus-wide rooftop systems delivering 20+ years of reduced operating costs.",
+      "body": "We have partnered with more than 100 schools, colleges, and universities to implement solar energy systems that meet their power needs while helping reduce operating costs for 20+ years.",
       "slug": "education",
       "title": "Education & Institutions"
     },
     {
       "img": "/photos/rooftop-foothill.jpg",
-      "body": "Hospital blocks, diagnostic centres, and pharma cold-storage — engineered for redundancy and uninterrupted operations.",
+      "body": "Rooftop solar for hospital blocks, diagnostic centres, and pharmaceutical cold-storage facilities — designed to support round-the-clock operations and continuous power requirements.",
       "slug": "healthcare",
       "title": "Healthcare & Hospitals"
     },
     {
       "img": "/photos/rooftop-urban.jpg",
-      "body": "Hotels, resorts, and large retail formats — solar with O&M tied to your asset's 24×7 brand standards.",
+      "body": "We work with hotels, resorts, and large retail formats to reduce electricity costs and achieve greater energy independence, while providing solar O&M services to optimize system performance and prevent energy losses.",
       "slug": "hospitality",
       "title": "Commercial, Hospitality & Retail"
     },
     {
       "img": "/photos/aerial-ground-mount.jpg",
-      "body": "Logistics parks, cold-chain, and distribution centres — large rooftop arrays utilised across long roof spans.",
+      "body": "We provide solar solutions for warehouses and logistics centres, which are critical infrastructure for modern supply chains. Large rooftop arrays are efficiently utilised to generate renewable energy and reduce operational costs.",
       "slug": "warehousing",
       "title": "Warehousing & Logistics"
     },
     {
       "img": "/photos/agrivoltaic-canopy.jpg",
-      "body": "Solar carports, agrivoltaic canopies, and dairy structures — dual-use sites that earn from energy and produce.",
+      "body": "We install solar solutions for agricultural applications, helping meet the growing energy needs of farms and power essential equipment such as pumps, generators, motors, and tillers. Our solutions generate clean energy while supporting sustainable farming through solar carports, agrivoltaic canopies, and dairy structures.",
       "slug": "agri",
       "title": "Agriculture & Agrivoltaic"
     }
@@ -953,19 +961,19 @@ export const site = {
   ],
   "differentiators": [
     {
-      "body": "Every proposal is grounded in a site survey, structural review, and yield model — not a price-per-watt formula.",
+      "body": "We conduct a systematic assessment of the solar installation site before sharing a proposal. We evaluate the roof condition, structural requirements, and yield model — not simply rely on a price-per-watt formula — and ensure accurate design.",
       "title": "Engineering-led, not sales-led"
     },
     {
-      "body": "Direct relationships with Goodwe, Havells, Sungrow, Renewsys, Adani, Vikram, and Waaree mean component access, warranty alignment, and bankable BOM.",
+      "body": "Direct relationships with leading Tier-1 manufacturers like GoodWe, Havells, Sungrow, RenewSys, Adani, Vikram, and Waaree enable complete solar installations, from major components such as modules to smaller components like connectors, with aligned warranties and a bankable BOM.",
       "title": "Tier-1 component partnerships"
     },
     {
-      "body": "Design, EPC, and O&M sit inside Sunprime Energy Solutions, under one accountable team.",
+      "body": "Design, sourcing, installation, and commissioning are handled by one accountable team, delivering turnkey solar infrastructure from start to finish.",
       "title": "Single team, single accountability"
     },
     {
-      "body": "In-house regulatory experience keeps DISCOM and statutory filings off your critical path.",
+      "body": "We bring on board experienced solar professionals who coordinate with the regulators at every phase, from submission of plans through final inspections. We also coordinate with the DISCOMs to make it an effortless process for you, and take care of all statutory filings.",
       "title": "Compliance handled, not delegated"
     }
   ],

@@ -22,8 +22,9 @@ export function WhyUs() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-md text-[16px] leading-relaxed text-ink/65">
-                We win on bankability and yield, not on the lowest price-per-watt. That changes how
-                we engineer, who we partner with, and how we operate the plant after handover.
+                Reliable plant output, performance in line with projections, and post-commissioning
+                support when issues arise — not just the lowest price per watt. This approach shapes
+                how we engineer, who we partner with, and how we operate the plant after handover.
               </p>
             </Reveal>
           </div>

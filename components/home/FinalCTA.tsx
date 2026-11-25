@@ -52,8 +52,10 @@ export function FinalCTA() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 max-w-md text-[16px] leading-relaxed text-ink/65">
-                Share a few details about your site. We&apos;ll come back within one business day
-                with a feasibility view — yield, BOM, and an honest commissioning timeline.
+                Share a few details about your site. From early solar project development and field
+                investigation through project execution and operations, we take care of it all. We
+                come back within one business day with a feasibility view covering expected yield,
+                BOM, and an honest timeline for commissioning and net meter installation.
               </p>
             </Reveal>
             <Reveal delay={0.15}>

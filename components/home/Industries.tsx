@@ -29,8 +29,11 @@ export function Industries() {
           <div className="md:col-span-5">
             <Reveal delay={0.1}>
               <p className="text-[16px] leading-relaxed text-ink/65">
-                From manufacturing plants and warehouses to schools, hospitals, and dairy farms — Sunprime Energy Solutions
-                designs solar plants around the load profile, roof type, and operating reality of each sector.
+                Our commercial solar system installation team works across manufacturing plants,
+                warehouses, schools, hospitals, and dairy farms that wish to switch to solar systems
+                for commercial use. Sunprime Energy Solutions designs solar plants around the unique
+                energy consumption patterns (load profiles), roof types, and operating realities of
+                each sector, while catering to strong daytime energy demand.
               </p>
             </Reveal>
           </div>

@@ -50,14 +50,18 @@ export function Hero() {
               as="h1"
               className="mx-auto mt-5 max-w-3xl text-balance text-[clamp(1.9rem,min(4.8vw,8vh),4.5rem)] font-semibold leading-[1.05] tracking-tight text-mist [text-shadow:0_2px_24px_rgba(10,22,40,0.35)]"
             >
-              Power your <span className="text-green-bright">future</span> with{" "}
-              <span className="text-green-bright">clean</span>, engineered solar{" "}
-              <span className="text-green-bright">energy</span>.
+              Harness the power of <span className="text-green-bright">clean</span>, engineered solar{" "}
+              <span className="text-green-bright">energy</span> with our premium grade{" "}
+              <span className="text-green-bright">solar panels</span>. Save money on your electricity
+              bills and protect the planet.
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mx-auto mt-5 max-w-2xl text-pretty text-[clamp(0.95rem,1.35vw,1.125rem)] leading-relaxed text-mist/85">
-                Grid-tied solar PV for commercial, industrial, and institutional sites across India —
-                designed for yield, built for the long view.
+                Our commercial rooftop solar solutions use grid-tied solar PV systems to meet the
+                on-site energy demands of industrial and institutional sites across India. Designed
+                to convert sunlight into direct current (DC) electricity and synchronise their output
+                with the grid, these systems help businesses reduce the amount of power they need to
+                draw from the network.
               </p>
             </Reveal>
             <Reveal delay={0.15}>
